@@ -41,5 +41,5 @@ function render() {
         saraksts.innerHTML += PRODUCT;
     }
 
-    localStorage.setItem("hided", JSON.stringify(hided))
+    localStorage.setItem("saraksts", JSON.stringify(saraksts))
 }
