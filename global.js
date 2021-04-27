@@ -3,7 +3,7 @@ let hided = [];
 
 window.addEventListener('load', () => {
     hided = JSON.parse(localStorage.getItem("hided") || "[]");
-    console.log(hided)
+    console.log(hided);
     render();
 })
 
@@ -28,8 +28,8 @@ document.getElementById("confirmProduct").addEventListener("click", () => {
 })
 
 function render() {
-    let saraksts = document.getElementById('saraksts');
-    saraksts.innerHTML = "";
+    let table = document.getElementById('table');
+    table.innerHTML = "";
 
     for(let i = 0; 1 < hided.length; i++) {
         let PRODUCT = `
@@ -38,8 +38,8 @@ function render() {
             <h4>Amount: ${hided[i].amount}</h4>
         </div>`
 
-        saraksts.innerHTML += PRODUCT;
+        table.innerHTML += PRODUCT;
     }
 
-    localStorage.setItem("saraksts", JSON.stringify(saraksts))
+    localStorage.setItem("hided", JSON.stringify(hided))
 }
